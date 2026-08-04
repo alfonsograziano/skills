@@ -470,7 +470,7 @@ for (const file of files) {
   const counts = {};
   for (const h of hits) counts[h.name] = (counts[h.name] ?? 0) + 1;
   const stats = Object.entries(counts)
-    .map(([name, count]) => ({ name, count, per1k: +(count / (words / 1000)).toFixed(2) }))
+    .map(([name, count]) => ({ name, count, per1k: words === 0 ? 0 : +(count / (words / 1000)).toFixed(2) }))
     .sort((a, b) => b.count - a.count);
 
   results.push({
@@ -483,7 +483,7 @@ for (const file of files) {
   });
 }
 
-const per1k = (n, w) => +(n / (w / 1000)).toFixed(2);
+const per1k = (n, w) => (w === 0 ? 0 : +(n / (w / 1000)).toFixed(2));
 
 if (values.json) {
   console.log(JSON.stringify(results, null, 2));
