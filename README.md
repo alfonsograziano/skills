@@ -9,6 +9,7 @@ A collection of some of the [Claude](https://claude.com/claude-code) skills I us
 | [write-without-slop](skills/write-without-slop/) | Rules to hold while composing prose, so the first draft doesn't read as AI-written. No reports, no scans — just the writing. |
 | [remove-ai-slop](skills/remove-ai-slop/) | Detects AI-sounding passages in existing text, fixes them, and re-scans to verify. Comes with a pattern scanner and a fix playbook. |
 | [node-cli-script](skills/node-cli-script/) | Writes Node.js CLI scripts and one-off automation with zero dependencies: `parseArgs`, `util.styleText`, and the rest of the built-in APIs. |
+| [aine-readiness-analyzer](skills/aine-readiness-analyzer/) | Audits how ready a repo is for AI coding agents — 55 evidence-backed checks on agent instructions, specs, tests, CI gates, tooling and safety — and writes a full `AINE-REPORT.md` with fixes ranked by priority. |
 
 The first two are counterparts: one prevents the problem, the other repairs it.
 
