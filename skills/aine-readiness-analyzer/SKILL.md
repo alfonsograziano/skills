@@ -24,7 +24,7 @@ The same holds everywhere. Linters are not just ESLint. Dependency pinning is no
 - **No subagents.** One agent, start to finish.
 - **Under ten minutes.** Gather evidence in a few broad passes, not one command per question.
 - **Never claim without proof.** If you cannot cite a path, a file, or a command you ran and its output, say in the proof line exactly what you could not determine and why.
-- **The template is a contract.** All 55 questions, verbatim, in order, with their numbers, their italic steer lines, and their `Priority` lines untouched. Never merge, drop, reword or renumber a question. Before writing the `Result` line, count: passed + failed + N/A must equal 55. If it does not, you lost a question — go back and find it.
+- **The template is a contract.** All the questions, verbatim, in order, with their numbers, their italic steer lines, and their `Priority` lines untouched. Never merge, drop, reword or renumber a question. Before writing the `Result` line, count: passed + failed + N/A must equal 46. If it does not, you lost a question — go back and find it.
 - **Never answer a question against a substitute artifact.** Each question names its subject. If the subject does not exist — no agent instruction file, no specs, no tests, no CI — the status is `FAIL` with a one-line proof pointing at the item that found it missing. Do not improvise a workaround ("answered against the README instead") and do not add a note explaining why you deviated. A repo where a great README does the agent file's job still fails the agent-file questions; the README gets its credit at its own items.
 
 ## Workflow
@@ -47,7 +47,7 @@ git -C <repo> ls-files | head -300
 git -C <repo> log --oneline -15
 ```
 
-Then read the files that answer many questions at once: the agent instruction file, the README, the manifest or build file, the CI config, the ignore file. Five or six reads should cover most of the checklist.
+Then read the files that answer many questions at once: the agent instruction entry point *and the files it points at*, the README, the manifest or build file, the CI config, the ignore file. Five or six reads should cover most of the checklist, plus one per pointer the entry point hands you.
 
 Work out the stack from what you find, not from what is popular. Fill in the header of the report — repo, date, stack — before you start on the questions.
 
@@ -57,14 +57,14 @@ Go top to bottom. Each question carries an italic steer line saying how to check
 
 - **The checkbox.** `[x]` when the answer is yes and the repo does this well. Leave `[ ]` for `FAIL`. Use `[x]` for `N/A` too, since there is nothing outstanding.
 - **Status.** `PASS`, `FAIL`, or `N/A`.
-- **Proof.** What you actually found. A path, a filename, a config key, a command and what it printed. For a `FAIL`, prove the absence: say where you looked. "No test directory, no test target in the Makefile, no test step in `.github/workflows/ci.yml`" is proof. "No tests" is not. The one exception: when a question's subject was already proven missing at an earlier item, the proof is one line pointing at that item — do not re-prove the absence at every dependent question.
-- **Recommendation.** On `FAIL`, one concrete sentence naming what to do *in this repo* — real paths, real commands. When the fix is really "fix an earlier item first", write "Blocked by item N" and nothing else. On `PASS` or `N/A`, write `—`.
+- **Proof.** What you actually found. A path, a filename, a config key, a command and what it printed. For a `FAIL`, prove the absence: say where you looked. "No test directory, no test target in the Makefile, no test step in `.github/workflows/ci.yml`" is proof. "No tests" is not. The one exception: when a question's subject was already proven missing at another item, the proof is one line naming that item by its subject — do not re-prove the absence at every dependent question.
+- **Recommendation.** On `FAIL`, one concrete sentence naming what to do *in this repo* — real paths, real commands. When the fix is really "fix another item first", write "Blocked by" plus that item's subject — "Blocked by the missing agent instruction file" — and nothing else. On `PASS` or `N/A`, write `—`.
 
 **`N/A` means "could never apply here", nothing else.** A pure library has no deployment to roll back. A language with no type system has no type gate. Those are `N/A` with a reason. "It does not exist" is never `N/A` — a missing artifact that would help this project is a `FAIL`, and so is every question about that artifact's quality.
 
 **Judge what is there, not what you would have written.** The bar for `PASS` is "this does its job". A short AGENTS.md that names the right five commands passes. A long one full of generic advice fails.
 
-Cross-reference items by their template numbers — they are stable across runs, so a before/after diff of two reports lines up item by item.
+Cross-reference items by their subject — never by their number, and never by their position. Numbers shift as the template gets edited and questions get added or dropped, so a stale "see item 14" silently starts pointing at a different question, and "the item above" breaks the moment a section is reordered. "See the specs item" survives both. This holds in the proofs and recommendations you write, not only in the template.
 
 ### 4. Write the file section by section
 
