@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report Kit Gallery</title>
+<link rel="stylesheet" href="https://alfonsograziano.it/tools/report.css">
+<script src="https://alfonsograziano.it/tools/report.js" defer></script>
+</head>
+<body>
+<main class="page">
+
+  <header class="hero">
+    <div class="eyebrow"><span>Report kit</span><span class="badge accent">v1</span><span>Sep 2026</span></div>
+    <h1>Every component, <span class="light">on one page</span><span class="accent">.</span></h1>
+    <p class="lead">A visual check for report.css and report.js. If something here looks wrong, every report looks wrong.</p>
+    <dl class="hero-meta">
+      <div><dt class="label">Author</dt><dd>The team</dd></div>
+      <div><dt class="label">Sources</dt><dd>alfonsograziano.it · ainativesoftware.engineering</dd></div>
+      <div><dt class="label">Read time</dt><dd>4 min</dd></div>
+    </dl>
+  </header>
+
+  <div class="with-toc">
+    <nav class="toc" data-toc></nav>
+    <div>
+
+    <!-- ─────────── KPIs ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Numbers first</span>
+        <h2>KPIs, deltas and sparklines</h2>
+      </div>
+      <div class="ruled" style="--min:200px">
+        <div class="kpi"><span class="label">Revenue</span><span class="kpi-value" data-count="84200" data-format="eur">€84,200</span><span class="row gap-2"><span class="delta up">+12.4%</span><span class="kpi-note">vs last year</span></span><span data-spark="61,63,62,68,70,72,75,79,84" data-fill></span></div>
+        <div class="kpi"><span class="label">Gross margin</span><span class="kpi-value"><span data-count="38">38</span><small>%</small></span><span class="row gap-2"><span class="delta up">+3 pts</span></span><span data-spark="30,31,33,32,35,36,38" data-color="good"></span></div>
+        <div class="kpi"><span class="label">Open tickets</span><span class="kpi-value">96<small>/day</small></span><span class="row gap-2"><span class="delta down good-dir">−18</span><span class="kpi-note">target &lt; 100</span></span><span data-spark="160,142,120,114,96" data-color="accent"></span></div>
+        <div class="kpi"><span class="label">First reply</span><span class="kpi-value">6.1<small>h</small></span><span class="row gap-2"><span class="delta flat">0.0</span><span class="kpi-note">flat for 4 weeks</span></span><span data-spark="6.2,5.9,6.0,6.3,6.1,6.1"></span></div>
+      </div>
+      <div class="g-3 mt-5">
+        <div class="card-flat row gap-4"><div class="donut accent" style="--v:72"><div><b>72</b><small>score</small></div></div><div><h4>Readiness</h4><p class="small muted mt-1">72 out of 100 checks pass.</p></div></div>
+        <div class="card-flat row gap-4"><div class="donut" style="--v:45"><div><b>45%</b><small>done</small></div></div><div><h4>Docs</h4><p class="small muted mt-1">6 of 13 pages written.</p></div></div>
+        <div class="card-flat"><span class="label">Overall score</span><div class="score mt-2"><b>8.4</b><span>/10</span></div><div class="scale" style="--v:8.4; --max:10" data-value="8.4"></div><div class="scale-ends"><span>Poor</span><span>Great</span></div></div>
+      </div>
+    </section>
+
+    <!-- ─────────── Bars ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">CSS-only data</span>
+        <h2>Bars, columns, stacks and meters</h2>
+      </div>
+      <div class="split even">
+        <div class="win">
+          <div class="win-bar"><span class="win-dot"></span>Costs · monthly</div>
+          <div class="win-body bars" style="--label-w:8rem">
+            <div class="bar is-top" style="--v:100"><span class="bar-label">Salaries</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">€850</span></div>
+            <div class="bar" style="--v:47"><span class="bar-label">Cloud</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">€400</span></div>
+            <div class="bar" style="--v:24"><span class="bar-label">Tools</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">€200</span></div>
+            <div class="bar" style="--v:12"><span class="bar-label">Travel</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">€100</span></div>
+            <div class="bar muted-bar" style="--v:8"><span class="bar-label">Other</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">€70</span></div>
+          </div>
+        </div>
+        <div class="win">
+          <div class="win-bar"><span class="win-dot"></span>Releases per month</div>
+          <div class="win-body">
+            <div class="columns" style="--h:170px">
+              <div class="column" style="--v:30"><div class="column-fill" data-value="3"></div></div>
+              <div class="column" style="--v:50"><div class="column-fill" data-value="5"></div></div>
+              <div class="column" style="--v:40"><div class="column-fill" data-value="4"></div></div>
+              <div class="column" style="--v:80"><div class="column-fill" data-value="8"></div></div>
+              <div class="column hl" style="--v:100"><div class="column-fill" data-value="10"></div></div>
+              <div class="column" style="--v:60"><div class="column-fill" data-value="6"></div></div>
+            </div>
+            <div class="column-labels"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="stack mt-5" style="--gap:1.25rem">
+        <div>
+          <div class="row between mb-2"><span class="label">Revenue by plan</span><div class="legend"><span><i class="swatch" style="--c:var(--c1)"></i>Pro</span><span><i class="swatch" style="--c:var(--c2)"></i>Team</span><span><i class="swatch" style="--c:var(--c3)"></i>Starter</span><span><i class="swatch" style="--c:var(--c4)"></i>Other</span></div></div>
+          <div class="stackbar"><span style="--v:62">62%</span><span style="--v:18">18%</span><span style="--v:14">14%</span><span style="--v:6">6%</span></div>
+        </div>
+        <div class="meter"><div class="meter-head"><span>Quarter target</span><b>€96k / €120k</b></div><div class="progress accent" style="--v:80"></div></div>
+        <div class="meter"><div class="meter-head"><span>Features shipped</span><b>7 / 12</b></div><div class="progress" style="--v:58"></div></div>
+        <div class="row gap-6">
+          <div><span class="label">Share of goals on track</span><div class="waffle mt-2" data-value="45" data-alt="18"></div><div class="legend mt-2"><span><i class="swatch" style="--c:var(--accent)"></i>Done 18</span><span><i class="swatch"></i>On track 45</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── Charts ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Chart.js, themed</span>
+        <h2>Interactive charts</h2>
+      </div>
+      <div class="g-2">
+        <figure class="win figure">
+          <div class="win-bar"><span class="win-dot"></span><span class="grow">Revenue, 2026</span>
+            <div class="segmented" data-series-toggle="#nw"><button data-series="all">All</button><button data-series="0">Actual</button><button data-series="1">Plan</button></div>
+          </div>
+          <div class="win-body">
+            <div class="chart" id="nw" aria-label="Revenue actual against plan, Jan to Sep 2026">
+              <script type="application/json">
+              {"type":"line","format":"eurk","target":90000,"targetLabel":"Year goal",
+               "labels":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep"],
+               "datasets":[{"label":"Actual","data":[61000,63000,62000,68000,70000,72000,75000,79000,84200],"fill":true},
+                           {"label":"Plan","data":[60000,63000,66000,69000,72000,75000,78000,81000,84000],"dashed":true,"color":"c3"}]}
+              </script>
+            </div>
+          </div>
+          <figcaption class="p-4 mt-0">Hover a point. Toggle series above.</figcaption>
+        </figure>
+        <figure class="win figure">
+          <div class="win-bar"><span class="win-dot"></span>Hours per week by activity</div>
+          <div class="win-body">
+            <div class="chart" aria-label="Hours per week by activity">
+              <script type="application/json">
+              {"type":"bar","horizontal":true,"highlight":["Deep work"],"valueLabels":true,"format":"h",
+               "labels":["Meetings","Deep work","Reviews","Support","Admin"],
+               "datasets":[{"label":"Hours","data":[40,8,5,4,3]}]}
+              </script>
+            </div>
+          </div>
+        </figure>
+        <figure class="win figure">
+          <div class="win-bar"><span class="win-dot"></span>Time split</div>
+          <div class="win-body">
+            <div class="chart" aria-label="Time split">
+              <script type="application/json">
+              {"type":"doughnut","format":"pct","center":{"value":"62%","label":"build"},
+               "labels":["Build","Meetings","Support","Hiring","Other"],
+               "datasets":[{"data":[62,20,9,5,4]}]}
+              </script>
+            </div>
+          </div>
+        </figure>
+        <figure class="win figure">
+          <div class="win-bar"><span class="win-dot"></span>Team radar</div>
+          <div class="win-body">
+            <div class="chart" aria-label="Team radar, now vs goal">
+              <script type="application/json">
+              {"type":"radar",
+               "labels":["Speed","Quality","Docs","Tests","Security","Support"],
+               "datasets":[{"label":"Now","data":[9,7,6,4,6,7],"fill":true},{"label":"Goal","data":[9,8,8,7,8,8],"color":"accent","dashed":true}]}
+              </script>
+            </div>
+          </div>
+        </figure>
+        <figure class="win figure" style="grid-column:1/-1">
+          <div class="win-bar"><span class="win-dot"></span>Monthly spend, stacked</div>
+          <div class="win-body">
+            <div class="chart" aria-label="Monthly spend stacked by category">
+              <script type="application/json">
+              {"type":"bar","stacked":true,"format":"eur",
+               "labels":["Apr","May","Jun","Jul","Aug","Sep"],
+               "datasets":[{"label":"Fixed","data":[1100,1100,1150,1150,1150,1150]},
+                           {"label":"Variable","data":[500,620,480,700,540,510]},
+                           {"label":"Fun","data":[150,200,90,300,120,160]}]}
+              </script>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─────────── Diagrams ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Mermaid + Excalidraw</span>
+        <h2>Diagrams</h2>
+      </div>
+      <div class="tabs">
+        <div class="tab-panel" data-label="Flowchart">
+          <pre class="mermaid">
+flowchart LR
+  A[Idea] --> B{Worth it?}
+  B -- yes --> C[Spec]:::hl
+  B -- no --> D[Park it]:::muted
+  C --> E[Build] --> F[Ship]:::dark
+          </pre>
+        </div>
+        <div class="tab-panel" data-label="Sequence">
+          <pre class="mermaid">
+sequenceDiagram
+  participant A as Lead
+  participant C as Client
+  participant T as Team
+  A->>C: Pitch the new plan
+  C-->>A: Wants a pilot
+  A->>T: Staff 2 engineers
+  Note over A,T: 6-week pilot
+  T-->>C: Demo + results
+          </pre>
+        </div>
+        <div class="tab-panel" data-label="Timeline">
+          <pre class="mermaid">
+timeline
+  title 2026
+  Q1 : Beta launched
+  Q2 : 50 customers
+  Q3 : Team doubled
+  Q4 : Public release
+          </pre>
+        </div>
+        <div class="tab-panel" data-label="Excalidraw">
+          <div class="excalidraw" aria-label="Hand-drawn loop: plan, build, check">
+            <script type="application/json">
+{"type":"excalidraw","version":2,"elements":[
+{"id":"a","type":"rectangle","x":0,"y":0,"width":160,"height":70,"strokeColor":"#131313","backgroundColor":"#ffffff","fillStyle":"solid","strokeWidth":2,"roughness":1,"opacity":100,"angle":0,"seed":1,"version":1,"versionNonce":1,"isDeleted":false,"groupIds":[],"boundElements":[{"type":"text","id":"at"}],"roundness":{"type":3},"frameId":null,"link":null,"locked":false,"strokeStyle":"solid","updated":1},
+{"id":"at","type":"text","x":45,"y":22,"width":70,"height":25,"text":"Plan","originalText":"Plan","fontSize":20,"fontFamily":5,"textAlign":"center","verticalAlign":"middle","containerId":"a","strokeColor":"#131313","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":1,"roughness":1,"opacity":100,"angle":0,"seed":2,"version":1,"versionNonce":2,"isDeleted":false,"groupIds":[],"boundElements":null,"roundness":null,"frameId":null,"link":null,"locked":false,"strokeStyle":"solid","updated":1,"lineHeight":1.25,"autoResize":true},
+{"id":"b","type":"rectangle","x":260,"y":0,"width":160,"height":70,"strokeColor":"#cd2016","backgroundColor":"#fbe3e1","fillStyle":"solid","strokeWidth":2,"roughness":1,"opacity":100,"angle":0,"seed":3,"version":1,"versionNonce":3,"isDeleted":false,"groupIds":[],"boundElements":[{"type":"text","id":"bt"}],"roundness":{"type":3},"frameId":null,"link":null,"locked":false,"strokeStyle":"solid","updated":1},
+{"id":"bt","type":"text","x":305,"y":22,"width":70,"height":25,"text":"Build","originalText":"Build","fontSize":20,"fontFamily":5,"textAlign":"center","verticalAlign":"middle","containerId":"b","strokeColor":"#cd2016","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":1,"roughness":1,"opacity":100,"angle":0,"seed":4,"version":1,"versionNonce":4,"isDeleted":false,"groupIds":[],"boundElements":null,"roundness":null,"frameId":null,"link":null,"locked":false,"strokeStyle":"solid","updated":1,"lineHeight":1.25,"autoResize":true},
+{"id":"ar","type":"arrow","x":165,"y":35,"width":90,"height":0,"points":[[0,0],[90,0]],"strokeColor":"#131313","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"roughness":1,"opacity":100,"angle":0,"seed":5,"version":1,"versionNonce":5,"isDeleted":false,"groupIds":[],"boundElements":null,"roundness":{"type":2},"frameId":null,"link":null,"locked":false,"strokeStyle":"solid","updated":1,"startArrowhead":null,"endArrowhead":"arrow","startBinding":null,"endBinding":null}
+],"appState":{"viewBackgroundColor":"#ffffff"},"files":{}}
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── Flow, steps, timeline ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Sequence and time</span>
+        <h2>Flows, steps, timelines</h2>
+      </div>
+      <div class="flow loop">
+        <div class="node"><span class="eyebrow">01 · Sense</span><strong>Measure</strong><p>Run the command that checks the goal.</p></div>
+        <div class="arrow"></div>
+        <div class="node"><span class="eyebrow">02 · Compare</span><strong>Diff vs target</strong><p>Is it inside the band?</p></div>
+        <div class="arrow"></div>
+        <div class="node hl"><span class="eyebrow">03 · Act</span><strong>Open a fix</strong><p>An agent writes the PR.</p></div>
+        <div class="arrow"></div>
+        <div class="node dark"><span class="eyebrow">04 · Record</span><strong>Log it</strong><p>Evidence for the next rung.</p></div>
+      </div>
+      <div class="split mt-7">
+        <ol class="steps">
+          <li class="done"><div><h4>Tests</h4><p>A fast suite the agent can run.</p></div></li>
+          <li class="done"><div><h4>Context</h4><p>AGENTS.md with the real rules.</p></div></li>
+          <li class="now"><div><h4>Gates</h4><p>CI that blocks a bad merge. <span class="badge accent">you are here</span></p></div></li>
+          <li><div><h4>Specs</h4><p>Write the what before the how.</p></div></li>
+        </ol>
+        <ol class="timeline">
+          <li class="done"><span class="when">Mar 2026</span><h4>Beta launched</h4><p>First 50 customers.</p></li>
+          <li class="done"><span class="when">Aug 2026</span><h4>New hire</h4><p>Second engineer joined.</p></li>
+          <li class="now"><span class="when">Now · Sep 2026</span><h4>Pricing page</h4><p>Testing two plans.</p></li>
+          <li class="future"><span class="when">Dec 2026</span><h4>v1.0</h4><p>Public launch.</p></li>
+        </ol>
+      </div>
+      <ol class="htimeline mt-7">
+        <li class="done"><span class="when">Q1</span><strong>Plan</strong><p>Goals set.</p></li>
+        <li class="done"><span class="when">Q2</span><strong>Build</strong><p>Habits in place.</p></li>
+        <li class="now"><span class="when">Q3</span><strong>Push</strong><p>Launch + hiring.</p></li>
+        <li><span class="when">Q4</span><strong>Review</strong><p>Close the year.</p></li>
+      </ol>
+      <div class="win mt-7">
+        <div class="win-bar"><span class="win-dot"></span>Roadmap · 2026</div>
+        <div class="win-body scroll-x">
+          <div class="gantt" style="--cols:12; min-width:560px">
+            <div class="g-head"><span></span><div class="g-track"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></div></div>
+            <div class="g-row"><span class="g-label">Product</span><div class="g-track" style="--now:9.7"><span class="g-bar hl" style="--s:3; --e:13">Writing</span><i class="g-now"></i></div></div>
+            <div class="g-row"><span class="g-label">Events</span><div class="g-track"><span class="g-bar done" style="--s:2; --e:6">Spring events</span><span class="g-bar" style="--s:9; --e:12">Autumn</span></div></div>
+            <div class="g-row"><span class="g-label">Newsletter</span><div class="g-track"><span class="g-bar ghost" style="--s:10; --e:13">Planned</span></div></div>
+            <div class="g-row"><span class="g-label">Reviews</span><div class="g-track"><i class="g-milestone" style="--s:1"></i><i class="g-milestone" style="--s:5"></i><i class="g-milestone" style="--s:9"></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── Compare ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Decide</span>
+        <h2>Compare options</h2>
+      </div>
+      <div class="versus">
+        <div class="card-flat"><span class="eyebrow">Option A</span><h3>Build in-house</h3><p class="muted small mt-2">Full control, slower start.</p><div class="meter mt-4"><div class="meter-head"><span>Fit</span><b>7/10</b></div><div class="progress" style="--v:70"></div></div></div>
+        <div class="vs">vs</div>
+        <div class="card-flat winner ticked"><span class="eyebrow">Option B · recommended</span><h3>Buy a SaaS tool</h3><p class="muted small mt-2">Live in a week, monthly fee.</p><div class="meter mt-4"><div class="meter-head"><span>Fit</span><b>8/10</b></div><div class="progress accent" style="--v:80"></div></div></div>
+      </div>
+      <div class="procon mt-5">
+        <div class="pro"><h4>Pros</h4><ul><li>Live in a week</li><li>Vendor handles updates</li></ul></div>
+        <div class="con"><h4>Cons</h4><ul><li>Cost grows with seats</li><li>Less control over the roadmap</li></ul></div>
+      </div>
+      <div class="split even mt-5">
+        <div class="matrix">
+          <span class="q">Quick wins</span><span class="q win-q">Big bets</span><span class="q">Fill-ins</span><span class="q">Money pits</span>
+          <span class="pt hl" style="--x:78; --y:80; --s:1.4">Onboarding</span>
+          <span class="pt" style="--x:30; --y:70">Newsletter</span>
+          <span class="pt left" style="--x:80; --y:25">New SaaS</span>
+          <span class="pt" style="--x:20; --y:20">Podcast</span>
+          <span class="axis-x">Effort →</span><span class="axis-y">Impact →</span>
+        </div>
+        <div class="heatmap" style="--cols:7">
+          <span></span><span class="h-col">M</span><span class="h-col">T</span><span class="h-col">W</span><span class="h-col">T</span><span class="h-col">F</span><span class="h-col">S</span><span class="h-col">S</span>
+          <span class="h-label">W36</span><i class="cell" style="--v:.9" data-tip="Mon: 2h deep work"></i><i class="cell" style="--v:.4"></i><i class="cell" style="--v:.7"></i><i class="cell" style="--v:.2"></i><i class="cell" style="--v:.8"></i><i class="cell" style="--v:.1"></i><i class="cell" style="--v:0"></i>
+          <span class="h-label">W37</span><i class="cell" style="--v:.6"></i><i class="cell" style="--v:.9"></i><i class="cell" style="--v:.5"></i><i class="cell" style="--v:.7"></i><i class="cell" style="--v:.3"></i><i class="cell" style="--v:.2"></i><i class="cell" style="--v:.1"></i>
+          <span class="h-label">W38</span><i class="cell" style="--v:1"></i><i class="cell" style="--v:.8"></i><i class="cell" style="--v:.6"></i><i class="cell" style="--v:.9"></i><i class="cell" style="--v:.4"></i><i class="cell" style="--v:0"></i><i class="cell" style="--v:.3"></i>
+        </div>
+      </div>
+      <div class="table-wrap mt-5">
+        <table class="sortable">
+          <thead><tr><th>Tool</th><th class="num">Price</th><th class="num">Score</th><th>Agents</th><th>MCP</th><th>Share</th></tr></thead>
+          <tbody>
+            <tr class="hl"><td>Claude Code</td><td class="num">€90</td><td class="num">9.1</td><td class="yes"></td><td class="yes"></td><td class="cellbar" style="--v:48">48%</td></tr>
+            <tr><td>Cursor</td><td class="num">€20</td><td class="num">8.2</td><td class="yes"></td><td class="part"></td><td class="cellbar" style="--v:30">30%</td></tr>
+            <tr><td>Copilot</td><td class="num">€10</td><td class="num">7.0</td><td class="part"></td><td class="no"></td><td class="cellbar" style="--v:22">22%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ─────────── Callouts, lists, calc ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Text that stands out</span>
+        <h2>Callouts, lists and a calculator</h2>
+      </div>
+      <div class="g-2">
+        <div class="callout note"><strong>Note</strong><p>Invoices are due on the 5th.</p></div>
+        <div class="callout good"><strong>On track</strong><p>Margin is above 35%.</p></div>
+        <div class="callout warn"><strong>Watch</strong><p>Signups have been flat for a month.</p></div>
+        <div class="callout bad"><strong>Behind</strong><p>Newsletter has not shipped.</p></div>
+      </div>
+      <div class="takeaway mt-6"><p>Ship the onboarding fix first. Everything else can move.</p></div>
+      <div class="g-3 mt-6">
+        <ul class="checklist"><li class="done">Pricing page</li><li class="done">Launch post</li><li>Onboarding draft</li><li class="no">Podcast (dropped)</li></ul>
+        <ol class="list-num"><li>Fix onboarding</li><li>Answer tickets daily</li><li>Review numbers on Friday</li></ol>
+        <dl class="facts"><dt>Owner</dt><dd>Sam</dd><dt>Due</dt><dd>Dec 2026</dd><dt>Status</dt><dd><span class="badge status good">on track</span></dd></dl>
+      </div>
+      <blockquote class="pull mt-7">If you cannot write the command that measures it, it is a wish, not a goal.<span class="who">Goal-Driven Engineering</span></blockquote>
+
+      <div class="win mt-7" data-calc>
+        <div class="win-bar"><span class="win-dot"></span>What-if · compound growth</div>
+        <div class="win-body calc">
+          <div class="stack">
+            <div class="field"><label>Monthly saving <output data-show-value="monthly" data-format="eur"></output></label><input type="range" name="monthly" min="100" max="3000" step="50" value="1200"></div>
+            <div class="field"><label>Return per year <output data-show-value="rate" data-format="pct1"></output></label><input type="range" name="rate" min="0" max="10" step="0.5" value="6"></div>
+            <div class="field"><label>Years <output data-show-value="years"></output></label><input type="range" name="years" min="1" max="30" step="1" value="10"></div>
+          </div>
+          <div class="calc-out">
+            <div class="kpi"><span class="label">You end with</span><span class="kpi-value" data-formula="monthly*12*((pow(1+rate/100,years)-1)/(rate/100||1e-9))" data-format="eur"></span></div>
+            <div class="kpi"><span class="label">Of which you put in</span><span class="kpi-value" style="font-size:1.6rem" data-formula="monthly*12*years" data-format="eur"></span></div>
+            <div class="meter"><div class="meter-head"><span>Growth share</span><b data-formula="100-100*(monthly*12*years)/(monthly*12*((pow(1+rate/100,years)-1)/(rate/100||1e-9)))" data-format="pct"></b></div><div class="progress accent" data-width-formula="100-100*(monthly*12*years)/(monthly*12*((pow(1+rate/100,years)-1)/(rate/100||1e-9)))"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────── Misc ─────────── -->
+    <section class="section">
+      <div class="section-head split-head">
+        <span class="eyebrow">Everything else</span>
+        <h2>Filters, accordions, code, dark panel</h2>
+      </div>
+      <div class="chips" data-filter="#ideas"><button data-value="all">All</button><button data-value="ai">AI</button><button data-value="money">Money</button><button data-value="health">Health</button></div>
+      <div class="g-3 mt-4" id="ideas">
+        <div class="card" data-tags="ai"><span class="eyebrow">AI</span><h4>Agent evals</h4></div>
+        <div class="card" data-tags="money"><span class="eyebrow">Money</span><h4>Price review</h4></div>
+        <div class="card" data-tags="health ai"><span class="eyebrow">Health · AI</span><h4>Wellbeing survey</h4></div>
+      </div>
+      <div class="mt-6">
+        <details class="acc"><summary>Why a hosted CSS file?<span class="badge">faq</span></summary><p>So a report is small HTML and every report shares one look.</p></details>
+        <details class="acc"><summary>Does it work offline?</summary><p>Layout falls back to system fonts; charts need the CDN.</p></details>
+      </div>
+      <div class="g-2 mt-6">
+        <pre><code class="language-js">const total = items.reduce((s, x) =&gt; s + x.price, 0);
+console.log(`Total: ${total}`);</code></pre>
+        <div class="terminal"><div class="terminal-bar">zsh</div><pre><span class="prompt">$</span> npm run lint
+<span class="out">✓ 0 errors, 214 records</span></pre></div>
+      </div>
+      <div class="ink mt-6">
+        <span class="eyebrow">Bottom line</span>
+        <h2 class="mt-3">The inverted panel flips every token<span class="accent">.</span></h2>
+        <div class="bars mt-5" style="--label-w:6rem">
+          <div class="bar is-top" style="--v:80"><span class="bar-label">Inside</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">80</span></div>
+          <div class="bar" style="--v:40"><span class="bar-label">Also</span><span class="bar-track"><span class="bar-fill"></span></span><span class="bar-value">40</span></div>
+        </div>
+      </div>
+      <div class="layers mt-6">
+        <div><span>Triggers</span><div class="chips"><span class="tag">cron</span><span class="tag">webhook</span></div></div>
+        <div class="hl"><span>Control plane</span><div>The only new work <span class="badge accent">new</span></div></div>
+        <div><span>Execution</span><div>Agents in sandboxes</div></div>
+        <div class="dark"><span>Record</span><div>Git + logs</div></div>
+      </div>
+      <div class="board mt-6">
+        <div class="lane"><span class="eyebrow">Todo <span>2</span></span><div class="item">Pricing test</div><div class="item">Help-center update</div></div>
+        <div class="lane"><span class="eyebrow">Doing <span>1</span></span><div class="item hl">Onboarding fix</div></div>
+        <div class="lane"><span class="eyebrow">Done <span>2</span></span><div class="item">Launch post</div><div class="item">Q3 invoices</div></div>
+      </div>
+      <div class="funnel mt-6">
+        <div style="--v:100"><span>Visitors</span><b>12,000</b></div>
+        <div style="--v:60"><span>Readers</span><b>7,100</b></div>
+        <div style="--v:30"><span>Subscribers</span><b>1,900</b></div>
+        <div style="--v:12"><span>Buyers</span><b>240</b></div>
+      </div>
+    </section>
+
+    </div>
+  </div>
+</main>
+</body>
+</html>
