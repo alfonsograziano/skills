@@ -10,6 +10,7 @@ A collection of some of the [Claude](https://claude.com/claude-code) skills I us
 | [remove-ai-slop](skills/remove-ai-slop/) | Detects AI-sounding passages in existing text, fixes them, and re-scans to verify. Comes with a pattern scanner and a fix playbook. |
 | [node-cli-script](skills/node-cli-script/) | Writes Node.js CLI scripts and one-off automation with zero dependencies: `parseArgs`, `util.styleText`, and the rest of the built-in APIs. |
 | [aine-readiness-analyzer](skills/aine-readiness-analyzer/) | Audits how ready a repo is for AI coding agents — 55 evidence-backed checks on agent instructions, specs, tests, CI gates, tooling and safety — and writes a full `AINE-REPORT.md` with fixes ranked by priority. |
+| [create-html-report](skills/create-html-report/) | Turns a request, data or research into one highly visual HTML report in a Swiss-modernist style. The page links a hosted stylesheet and script, so it is just content: KPI tiles, CSS charts, themed Chart.js, Mermaid and Excalidraw, timelines, roadmaps, 2x2 matrices, what-if calculators, dark mode and print. Ships a browser checker that screenshots desktop and phone in light and dark. |
 
 The first two are counterparts: one prevents the problem, the other repairs it.
 
