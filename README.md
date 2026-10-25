@@ -11,6 +11,7 @@ A collection of some of the [Claude](https://claude.com/claude-code) skills I us
 | [node-cli-script](skills/node-cli-script/) | Writes Node.js CLI scripts and one-off automation with zero dependencies: `parseArgs`, `util.styleText`, and the rest of the built-in APIs. |
 | [aine-readiness-analyzer](skills/aine-readiness-analyzer/) | Audits how ready a repo is for AI coding agents — 46 evidence-backed checks on agent instructions, specs, tests, CI gates, tooling and safety — and writes a full `AINE-REPORT.md` with fixes ranked by priority. |
 | [create-html-report](skills/create-html-report/) | Turns a request, data or research into one highly visual HTML report in a Swiss-modernist style. The page links a hosted stylesheet and script, so it is just content: KPI tiles, CSS charts, themed Chart.js, Mermaid and Excalidraw, timelines, roadmaps, 2x2 matrices, what-if calculators, dark mode and print. Ships a browser checker that screenshots desktop and phone in light and dark. |
+| [harness-retro](skills/harness-retro/) | Looks back at an agent session (the conversation, sub-agent reports and past sessions) and proposes fixes to the repo's harness, so the next agent does not hit the same wall. Each finding comes with a severity, the evidence, and the layer the fix belongs in: an `AGENTS.md` line, a rule, a skill, a script, a CLI or MCP tool, a gate, the LLM reviewer or a guardrail. Zero findings is a valid answer. Works with any agent. |
 
 The first two are counterparts: one prevents the problem, the other repairs it.
 
